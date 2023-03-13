@@ -48,7 +48,7 @@ def fen_to_list(fen):
                         n = -2
                     case 'k':
                         n = -1
-                board[i][file] = n
+                board[i][file] = n/6
                 file += 1
     n_board = []
     for i in range(8):
@@ -85,7 +85,7 @@ def fen_to_list(fen):
         for i in range(8):
             if split_fen[3][0] == a_to_n[i][0]:
                 n += a_to_n[i][1]
-        n_board.append(float(n-1))
+        n_board.append(float(n-1)/64)
 
     
     n_board.append(float(split_fen[4]))

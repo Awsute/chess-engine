@@ -12,7 +12,7 @@ def eval_future_states(model : tf.keras.Model, board : chess.Board, depth, disco
     for move in moves:
         c_board = chess.Board(board.fen())
         c_board.push(move)
-        r += (1.0/discount)*(model_eval_board(model, c_board) + eval_future_states(model, c_board, depth-1, discount))
+        r += model_eval_board(model, c_board)+(1.0/discount)*eval_future_states(model, c_board, depth-1, discount)
     return r
 
 
@@ -20,18 +20,16 @@ def eval_future_states(model : tf.keras.Model, board : chess.Board, depth, disco
 
 def create_model():
     layers = [
-        tf.keras.Input(shape=(71,)), 
-        tf.keras.layers.Dense(64,'swish'), 
-        tf.keras.layers.Dense(64,'swish'), 
-        tf.keras.layers.Dense(64,'swish'), 
-        tf.keras.layers.Dense(32,'swish'), 
-
+        tf.keras.Input(shape=(71,)),
+        tf.keras.layers.Dense(10,'swish'),
         tf.keras.layers.Dense(1)
     ]
-    test_model = tf.keras.Sequential()
+    test_model = tf.keras.Sequential(layers)
     test_model.compile(optimizer='sgd',loss='mse')
 
     return test_model
 
+def load_model(path):
+    return tf.keras.models.load_model(path)
 def model_eval_board(model, board):
     return model(np.array([fen_to_list(board.fen())]))[0][0].numpy()

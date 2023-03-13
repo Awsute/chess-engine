@@ -1,0 +1,11 @@
+[Event ""]
+[Site ""]
+[Date ""]
+[Round ""]
+[White "AI"]
+[Black "Awsute"]
+[Result ""]
+
+1. e3 e5 2. f4 f6 3. d4 d6 4. b4 exd4 5. Nc3 dxc3 6. Qd2 cxd2+ 7. Kf2 d1=Q 8.
+Ba3 Qxa1 9. Bd3 Bg4 10. Nh3 Qxh1 11. g3 Qf3+ 12. Ke1 Bxh3 13. Bc1 Nc6 14. e4
+Nxb4 15. e5 Nxd3+ 16. Kd2 dxe5 17. fxe5 Nf2+ 18. Ke1 Qdd1# * 
