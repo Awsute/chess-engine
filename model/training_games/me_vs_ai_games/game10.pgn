@@ -1,0 +1,12 @@
+[Event ""]
+[Site ""]
+[Date ""]
+[Round ""]
+[White "AI"]
+[Black "Awsute"]
+[Result ""]
+
+1. h4 e5 2. a4 d5 3. c3 Qf6 4. Nf3 Bc5 5. b4 Bb6 6. Na3 e4 7. Rg1 exf3 8. exf3
+Bg4 9. Rh1 Nc6 10. Ba6 bxa6 11. Kf1 Bf5 12. Ke1 Qe6+ 13. Kf1 Bd3+ 14. Kg1 Ne5
+15. Qe1 Nxf3+ 16. gxf3 Qxe1+ 17. Kg2 Qe6 18. Rd1 Qg6+ 19. Kh1 Bxf2 20. Nb1 Qf5
+21. Kg2 Bxh4 22. Kh1 Qxf3+ 23. Kh2 Qg3+ 24. Kh1 Be4# * 

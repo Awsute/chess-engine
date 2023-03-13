@@ -87,5 +87,12 @@ def train_pgn(model, location, epochs):
 
 
 def train_folder(folder_path, model, epochs):
+    data = None
     for filepath in os.listdir(folder_path):
-        train_pgn(model, folder_path + "/"+ filepath, epochs)
+        data1 = get_data_from_game(folder_path+"/"+filepath, True)
+        data2 = get_data_from_game(folder_path+"/"+filepath, False)
+        if data == None:
+            data = data1.concatenate(data2)
+        else:
+            data = data.concatenate(data1.concatenate(data2))
+    model.fit(data, batch_size=data.__len__(), epochs=epochs)
