@@ -1,0 +1,26 @@
+[Event "vs Computer"]
+[Site "Chess.com"]
+[Date "2023.03.13"]
+[Round "-"]
+[White "Martin-BOT"]
+[Black "awsute"]
+[Result "1-0"]
+[CurrentPosition "1nbQ4/r1pkB2p/5p2/3P2p1/2B5/7P/p1PK1Pp1/bN5R b - - 1 23"]
+[Timezone "UTC"]
+[ECO "B00"]
+[ECOUrl "https://www.chess.com/openings/Kings-Pawn-Opening-Hippopotamus-Defense"]
+[UTCDate "2023.03.13"]
+[UTCTime "22:13:17"]
+[WhiteElo "250"]
+[BlackElo "1177"]
+[TimeControl "1/0"]
+[Termination "Martin-BOT won by checkmate"]
+[StartTime "22:13:17"]
+[EndDate "2023.03.13"]
+[EndTime "23:15:27"]
+[Link "https://www.chess.com/game/computer/49696735"]
+
+1. e4 Nh6 2. Nc3 a6 3. d4 g6 4. h3 Ra7 5. Qf3 g5 6. b3 Bg7 7. Nb1 Bxd4 8. b4
+Bxa1 9. Qh5 d5 10. Qxh6 Kd7 11. a4 e5 12. Ba3 b5 13. exd5 bxa4 14. Qg7 a5 15.
+Be2 axb4 16. Bxb4 Qe7 17. Qxh8 a3 18. Nf3 a2 19. Bc4 f6 20. Kd2 e4 21. Qg8 exf3
+22. Bxe7 fxg2 23. Qd8# 1-0

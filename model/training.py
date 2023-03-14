@@ -32,6 +32,7 @@ def get_data_from_game(pgn_location, is_white):
     return tf.data.Dataset.zip((tf.data.Dataset.from_tensor_slices(x_f), tf.data.Dataset.from_tensor_slices(y_f)))
 
 def self_train(model, depth, discount, games_per_generation, epochs):
+    model.add(tf.keras.layers.GaussianNoise(0.1))
     data_set = None
     length = 0
     for i in range(games_per_generation):
@@ -74,6 +75,7 @@ def self_train(model, depth, discount, games_per_generation, epochs):
             data_set = data_set.concatenate(zipped_data)
         #model.fit(data_set, batch_size=length, epochs=epochs)
         print("game# " + str(i))
+    model.pop()
     model.fit(data_set, batch_size=length, epochs=epochs)
     
     print(data_set)
